@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舌尖盛宴 芬兰精选</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #fcfbf7; color: #2d2a26; }
+        .dish-card { background: white; transition: all 0.4s ease; border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; }
+        .dish-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1); }
+        .allergy-tag { font-size: 10px; font-weight: bold; color: #92400e; background: #fef3c7; padding: 2px 6px; rounded: 4px; }
+    </style>
+</head>
+<body>
+    <div class="fixed bottom-8 right-8 z-[100] group">
+        <a href="index.html#contact" class="bg-stone-900 text-stone-200 px-6 py-4 rounded-xl shadow-2xl flex flex-col items-end border border-stone-700 hover:bg-stone-800 transition">
+            <span class="text-[10px] uppercase tracking-widest opacity-60">Professional Web Design</span>
+            <span class="font-bold text-amber-500 font-sans">联系我们咨询详情</span>
+        </a>
+    </div>
+
+
+    <header class="py-16 text-center">
+        <div class="text-[10px] tracking-[0.4em] uppercase text-stone-400 mb-4">Tampere • Keskustori</div>
+        <h1 class="text-6xl italic text-stone-800">舌尖盛宴 芬兰精选</h1>
+        <div class="w-12 h-px bg-amber-600 mx-auto mt-6"></div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 mb-32">
+        <div class="h-[70vh] rounded-[3rem] overflow-hidden relative shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-stone-900/20"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <p class="uppercase tracking-widest text-sm mb-4">The Art of Chinese Cuisine</p>
+                    <h2 class="text-6xl serif italic">Aitoja Makuja</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="col-span-full py-6 text-center">
+            <h2 class="text-4xl italic serif mb-4">Suositut Annoksemme</h2>
+            <p class="text-stone-400 uppercase text-xs tracking-widest leading-none">Our Signature Selection</p>
+        </div>
+            <div class="col-span-full dish-card overflow-hidden rounded-3xl">
+                <div class="grid md:grid-cols-2 h-full">
+                    <div class="h-80 md:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                    <div class="p-10 flex flex-col justify-center">
+                        <span class="allergy-tag self-start mb-4">L, M</span>
+                        <h3 class="text-3xl serif italic font-bold mb-4">KongBao Kana</h3>
+                        <p class="text-stone-500 text-sm mb-4 font-semibold italic uppercase tracking-tighter">Authentic kongbao kana</p>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 font-normal">Klassinen rapea ankka tarjoiltuna lettujen, kurkun ja hoisin-kastikkeen kera. / Classic chicken served with pancakes and hoisin sauce.</p>
+                        <span class="text-3xl font-bold font-sans">32.00€</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish-card p-6 rounded-3xl">
+                <div class="h-56 rounded-2xl overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl serif font-bold mb-1">Gongbao-kanaa</h3>
+                <p class="text-stone-400 text-xs mb-3 italic">Kung Pao Chicken (L, G, P)</p>
+                <p class="text-stone-600 text-sm mb-6 flex-grow leading-relaxed font-normal italic">Tulista kanaa, maapähkinöitä ja vihanneksia. / Spicy chicken with peanuts and vegetables.</p>
+                <span class="text-2xl font-bold font-sans">18.50€</span>
+            </div>
+
+            <div class="dish-card p-6 rounded-3xl">
+                <div class="h-56 rounded-2xl overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl serif font-bold mb-1">Mapo Caofan</h3>
+                <p class="text-stone-400 text-xs mb-3 italic">Sichuan Caofan (G, Vegan)</p>
+                <p class="text-stone-600 text-sm mb-6 flex-grow leading-relaxed font-normal italic">Haudutettua tofua tulisessa chilikastikkeessa. / Braised tofu in spicy chili sauce.</p>
+                <span class="text-2xl font-bold font-sans">16.50€</span>
+            </div>
+
+            <div class="dish-card p-6 rounded-3xl">
+                <div class="h-56 rounded-2xl overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl serif font-bold mb-1 text-left">Dim Sum Lajitelma</h3>
+                <p class="text-stone-400 text-xs mb-3 italic">Handmade Dim Sum (L, M)</p>
+                <p class="text-stone-600 text-sm mb-6 flex-grow leading-relaxed font-normal italic text-left">Höyrytettyjä käsintehtyjä mykyjä. / Steamed handmade dumplings (6pcs).</p>
+                <span class="text-2xl font-bold font-sans text-left">14.90€</span>
+            </div>
+
+            <div class="dish-card p-6 rounded-3xl">
+                <div class="h-56 rounded-2xl overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=600&auto=format&fit=crop" alt="Spring Rolls" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl serif font-bold mb-1 text-left">Kevätkääryleet</h3>
+                <p class="text-stone-400 text-xs mb-3 italic">Crispy Spring Rolls (L, V)</p>
+                <p class="text-stone-600 text-sm mb-6 flex-grow leading-relaxed font-normal italic text-left">Rapeat kevätkääryleet kasvis-täytteellä. / Crispy vegetable spring rolls (4pcs).</p>
+                <span class="text-2xl font-bold font-sans text-left">8.50€</span>
+            </div>
+
+            <div class="dish-card p-6 rounded-3xl">
+                <div class="h-56 rounded-2xl overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl serif font-bold mb-1 text-left">Paistetut Nuudelit</h3>
+                <p class="text-stone-400 text-xs mb-3 italic">Wok Fried Noodles (L, M)</p>
+                <p class="text-stone-600 text-sm mb-6 flex-grow leading-relaxed font-normal italic text-left">Paistettuja nuudeleita ja vihanneksia. / Stir-fried noodles with vegetables.</p>
+                <span class="text-2xl font-bold font-sans text-left">15.00€</span>
+            </div>
+
+            <div class="dish-card p-6 rounded-3xl text-left">
+                <div class="h-56 rounded-2xl overflow-hidden mb-6 text-left">
+                    <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=600&auto=format&fit=crop" alt="Sweet and Sour Pork" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl serif font-bold mb-1 text-left">Hapanimeläporsasta</h3>
+                <p class="text-stone-400 text-xs mb-3 italic text-left">Sweet and Sour Pork (L, G)</p>
+                <p class="text-stone-600 text-sm mb-6 flex-grow leading-relaxed font-normal italic text-left">Porsaanlihaa ja ananasta hapanimeläkastikkeessa. / Sweet and sour pork with pineapple.</p>
+                <span class="text-2xl font-bold font-sans text-left">17.90€</span>
+            </div>
+
+            <div class="dish-card p-6 rounded-3xl text-left">
+                <div class="h-56 rounded-2xl overflow-hidden mb-6 text-left">
+                    <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl serif font-bold mb-1 text-left font-bold">Paistetut Mykyt</h3>
+                <p class="text-stone-400 text-xs mb-3 italic text-left">Fried Dumplings (10pcs) (L, M)</p>
+                <p class="text-stone-600 text-sm mb-6 flex-grow leading-relaxed font-normal italic text-left">Pannulla paistettuja porsaanlihamykyjä. / Pan-fried pork dumplings.</p>
+                <span class="text-2xl font-bold font-sans text-left">15.50€</span>
+            </div>
+
+            <div class="dish-card p-6 rounded-3xl text-left">
+                <div class="h-56 rounded-2xl overflow-hidden mb-6 text-left">
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl serif font-bold mb-1 text-left font-bold">Härkää ja Parsakaalia</h3>
+                <p class="text-stone-400 text-xs mb-3 italic text-left">Beef and Broccoli (L, G, M)</p>
+                <p class="text-stone-600 text-sm mb-6 flex-grow leading-relaxed font-normal italic text-left">Mureaa häränlihaa osterikastikkeessa. / Tender beef slices with broccoli.</p>
+                <span class="text-2xl font-bold font-sans text-left font-bold">19.80€</span>
+            </div>
+
+            <div class="dish-card p-6 rounded-3xl text-left">
+                <div class="h-56 rounded-2xl overflow-hidden mb-6 text-left">
+                    <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=600&auto=format&fit=crop" alt="Crispy King Prawns" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl serif font-bold mb-1 text-left font-bold font-bold">Rapeat Jättiravut</h3>
+                <p class="text-stone-400 text-xs mb-3 italic text-left">Crispy King Prawns (L, M)</p>
+                <p class="text-stone-600 text-sm mb-6 flex-grow leading-relaxed font-normal italic text-left font-normal italic">Rapeat fritatut jättiravut chilikastikkeella. / Crispy king prawns with chili dip.</p>
+                <span class="text-2xl font-bold font-sans text-left font-bold">22.50€</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl italic serif mb-4 text-stone-800">Reserve Your Table</h2>
+            <p class="text-stone-500 uppercase text-xs tracking-widest leading-none">Book a premium dining experience</p>
+        </div>
+        <form class="bg-white rounded-3xl shadow-xl p-10 border border-stone-200">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <label class="block text-stone-600 font-semibold mb-2 uppercase text-xs tracking-widest">Date</label>
+                    <input type="date" class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:border-amber-600 focus:ring focus:ring-amber-100 font-serif text-stone-800">
+                </div>
+                <div>
+                    <label class="block text-stone-600 font-semibold mb-2 uppercase text-xs tracking-widest">Time</label>
+                    <input type="time" class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:border-amber-600 focus:ring focus:ring-amber-100 font-serif text-stone-800">
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <label class="block text-stone-600 font-semibold mb-2 uppercase text-xs tracking-widest">Party Size</label>
+                    <select class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:border-amber-600 focus:ring focus:ring-amber-100 font-serif text-stone-800">
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                        <option>5 Guests</option>
+                        <option>6+ Guests</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-stone-600 font-semibold mb-2 uppercase text-xs tracking-widest">Name</label>
+                    <input type="text" placeholder="Your name" class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:border-amber-600 focus:ring focus:ring-amber-100 font-serif text-stone-800">
+                </div>
+            </div>
+            <div class="mb-8">
+                <label class="block text-stone-600 font-semibold mb-2 uppercase text-xs tracking-widest">Phone</label>
+                <input type="tel" placeholder="+358 40 123 4567" class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:border-amber-600 focus:ring focus:ring-amber-100 font-serif text-stone-800">
+            </div>
+            <button type="submit" class="w-full bg-stone-900 hover:bg-stone-800 text-white font-semibold py-4 rounded-lg uppercase tracking-widest text-sm transition">
+                Confirm Reservation
+            </button>
+        </form>
+    </section>
+
+    <footer class="bg-stone-900 py-24 px-6 rounded-t-[3rem] text-stone-200 mt-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl serif italic mb-8 uppercase leading-none">Reservations & Location</h2>
+            <div class="space-y-4 mb-12">
+                <p class="text-amber-500 text-3xl font-bold leading-none font-sans uppercase">040 123 4567</p>
+                <p class="text-stone-500 uppercase tracking-[0.3em] text-sm leading-none">Keskustori 1, Tampere</p>
+            </div>
+            <div class="h-[350px] rounded-3xl overflow-hidden border-4 border-gray-800 shadow-2xl">
+                <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1848.563721345!2d23.759!3d61.498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468ed8ab10dfe23d%3A0x2964893796f7c978!2sKeskustori%2C%2033100%20Tampere!5e0!3m2!1sfi!2sfi!4v1700000000000"></iframe>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

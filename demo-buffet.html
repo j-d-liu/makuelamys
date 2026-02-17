@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舌尖盛宴 芬兰精选</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dish-card:hover img { transform: scale(1.1); transition: 0.5s; }
+        /* 确保图片加载失败时也有底色 */
+        img { background-color: #f3f4f6; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900">
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] bg-black/90 text-white px-6 py-3 rounded-full flex items-center shadow-2xl border border-white/20 whitespace-nowrap">
+        <span class="mr-4 text-sm font-light">这是网站预览效果</span>
+        <a href="index.html#contact" class="bg-red-600 px-4 py-1 rounded-full text-sm font-bold hover:bg-red-500 transition">联系制作同款</a>
+    </div>
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50 py-4 px-6 flex justify-between items-center">
+        <div class="font-black text-2xl tracking-tighter text-red-700 uppercase leading-none">舌尖盛宴 芬兰精选</div>
+        <div class="flex space-x-4 text-xs font-bold uppercase tracking-widest text-gray-400 leading-none">
+            <span class="text-red-600 border-b-2 border-red-600 leading-none">FI</span>
+            <span class="leading-none">EN</span>
+        </div>
+    </nav>
+
+    <header class="relative h-[450px]">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1600&auto=format&fit=crop" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase leading-none">Buffet Tampere</h1>
+            <p class="text-lg opacity-90 max-w-xl leading-none">Tervetuloa nauttimaan kaupungin monipuolisimmasta buffetista!</p>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-4 -mt-12 relative z-10 grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-8 rounded-2xl shadow-xl flex justify-between items-center">
+            <div>
+                <h3 class="font-bold text-gray-500 uppercase text-xs mb-1 leading-none text-left">Arkisin / Mon-Fri</h3>
+                <p class="text-4xl font-black leading-none text-left">12.90€</p>
+                <p class="text-gray-400 text-sm italic mt-2 leading-none text-left font-normal">11:00 - 15:00</p>
+            </div>
+            <div class="text-right text-sm text-gray-500 leading-relaxed font-normal">Sisältää: <br> Sushi, lämmin ruoka, <br> kahvi & tee</div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-xl flex justify-between items-center border-l-8 border-red-600">
+            <div>
+                <h3 class="font-bold text-gray-500 uppercase text-xs mb-1 leading-none text-left">Viikonloppu / Weekend</h3>
+                <p class="text-4xl font-black text-red-700 leading-none text-left">17.50€</p>
+                <p class="text-gray-400 text-sm italic mt-2 leading-none text-left font-normal">Koko päivä / All day</p>
+            </div>
+            <span class="bg-red-100 text-red-700 px-3 py-1 rounded text-xs font-bold leading-none">SUOSITTU!</span>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-black uppercase tracking-tight leading-none text-center">Valikoimamme / Our Selection</h2>
+            <div class="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="dish-card relative overflow-hidden rounded-xl aspect-square shadow-lg group">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white font-bold text-sm leading-none">Sushi / Sushivalikoima</p>
+                </div>
+            </div>
+            <div class="dish-card relative overflow-hidden rounded-xl aspect-square shadow-lg group">
+                <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover text-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white font-bold text-sm leading-none">Kevätkääryleet / Spring Rolls</p>
+                </div>
+            </div>
+            <div class="dish-card relative overflow-hidden rounded-xl aspect-square shadow-lg group text-center">
+                <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover text-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 text-center">
+                    <p class="text-white font-bold text-sm leading-none text-center">Paistettu Riisi / Fried Rice</p>
+                </div>
+            </div>
+            <div class="dish-card relative overflow-hidden rounded-xl aspect-square shadow-lg group text-center">
+                <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover text-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 text-center">
+                    <p class="text-white font-bold text-sm leading-none text-center">Gongbao Kana / Chicken</p>
+                </div>
+            </div>
+            <div class="dish-card relative overflow-hidden rounded-xl aspect-square shadow-lg group text-center">
+                <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover text-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 text-center">
+                    <p class="text-white font-bold text-sm leading-none text-center">Dumplings / Mykyjä</p>
+                </div>
+            </div>
+            <div class="dish-card relative overflow-hidden rounded-xl aspect-square shadow-lg group text-center">
+                <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover text-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 text-center">
+                    <p class="text-white font-bold text-sm leading-none text-center">Härkää / Beef with Veggies</p>
+                </div>
+            </div>
+            <div class="dish-card relative overflow-hidden rounded-xl aspect-square shadow-lg group text-center">
+                <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover text-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 text-center">
+                    <p class="text-white font-bold text-sm leading-none text-center">Paistettu Nuudeli / Noodles</p>
+                </div>
+            </div>
+            <div class="dish-card relative overflow-hidden rounded-xl aspect-square shadow-lg group text-center">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 text-center">
+                    <p class="text-white font-bold text-sm leading-none text-center">Jälkiruoka / Desserts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-4 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-black uppercase tracking-tight leading-none text-center">Reserve Your Table</h2>
+            <div class="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
+        </div>
+        <form class="bg-white rounded-2xl shadow-2xl p-10 border-t-8 border-red-600">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2 uppercase text-xs">Date</label>
+                    <input type="date" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-100 text-gray-900 font-medium">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2 uppercase text-xs">Time</label>
+                    <input type="time" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-100 text-gray-900 font-medium">
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2 uppercase text-xs">Party Size</label>
+                    <select class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-100 text-gray-900 font-medium">
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                        <option>5 Guests</option>
+                        <option>6+ Guests</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2 uppercase text-xs">Name</label>
+                    <input type="text" placeholder="Your name" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-100 text-gray-900 font-medium">
+                </div>
+            </div>
+            <div class="mb-8">
+                <label class="block text-gray-700 font-bold mb-2 uppercase text-xs">Phone</label>
+                <input type="tel" placeholder="+358 40 123 4567" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-100 text-gray-900 font-medium">
+            </div>
+            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-black py-4 rounded-lg uppercase tracking-widest text-sm transition">
+                Confirm Reservation
+            </button>
+        </form>
+    </section>
+
+    <section class="bg-gray-900 text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-black mb-6 italic leading-none text-left">Tule Syömään!</h2>
+                <p class="text-xl text-red-500 mb-8 font-bold leading-none text-left">📍 Keskustori 1, 33100 Tampere</p>
+                <div class="space-y-4 text-gray-400 font-normal">
+                    <p class="leading-none text-left">Avoinna joka päivä:</p>
+                    <p class="leading-none text-left">Ma-Pe: 11:00 - 21:00</p>
+                    <p class="leading-none text-left">La-Su: 12:00 - 21:00</p>
+                </div>
+            </div>
+            <div class="h-[350px] rounded-3xl overflow-hidden border-4 border-gray-800 shadow-2xl">
+                <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1848.563721345!2d23.759!3d61.498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468ed8ab10dfe23d%3A0x2964893796f7c978!2sKeskustori%2C%2033100%20Tampere!5e0!3m2!1sfi!2sfi!4v1700000000000"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-400 text-xs font-light uppercase tracking-widest">
+        © Golden Dragon Tampere • All Rights Reserved
+    </footer>
+</body>
+</html>
