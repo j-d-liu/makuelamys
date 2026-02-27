@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,11 @@
     <link rel="canonical" href="https://makuelamys.fi/" />
 
     <style>
+        /* Language visibility */
+        .lang { display: none; }
+        html.lang-fi .lang-fi { display: inline; }
+        html.lang-en .lang-en { display: inline; }
+        html.lang-zh .lang-zh { display: inline; }
         :root {
             --fin-blue: #002F6C; /* Finnish Flag Blue */
             --clean-white: #ffffff;
@@ -111,79 +116,95 @@
 <body>
 
     <nav>
-        <div class="logo">Makuelämys <span>舌尖盛宴 芬兰精选 </span></div>
-        <a href="#contact" class="nav-btn">联系我们</a>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; width:100%;">
+            <div class="logo">Makuelämys <span><span class="lang lang-zh">舌尖盛宴 芬兰精选</span><span class="lang lang-en">— Flavours of Finland</span><span class="lang lang-fi">— Suomalaiset makuelämykset</span></span></div>
+            <div style="display:flex; align-items:center; gap:12px;">
+                <a href="#contact" class="nav-btn"><span class="lang lang-zh">联系我们</span><span class="lang lang-en">Contact Us</span><span class="lang lang-fi">Ota yhteyttä</span></a>
+                <div style="position:relative; display:inline-block;">
+                    <button id="langBtn" aria-label="Select language" style="background:none; border:none; font-size:1.8rem; cursor:pointer; padding:4px 8px; line-height:1; border-radius:4px; transition:background 0.2s; hover{background:#f0f0f0;}">🇫🇮</button>
+                    <div id="langDropdown" style="display:none; position:absolute; top:100%; right:0; background:white; border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.15); z-index:100; margin-top:4px;">
+                        <button id="lang-fi" style="background:none; border:none; font-size:1.8rem; cursor:pointer; padding:8px 12px; display:block; width:100%; text-align:center; border-radius:6px; transition:background 0.2s;" title="Suomi">🇫🇮</button>
+                        <button id="lang-en" style="background:none; border:none; font-size:1.8rem; cursor:pointer; padding:8px 12px; display:block; width:100%; text-align:center; border-radius:6px; transition:background 0.2s;" title="English">🇬🇧</button>
+                        <button id="lang-zh" style="background:none; border:none; font-size:1.8rem; cursor:pointer; padding:8px 12px; display:block; width:100%; text-align:center; border-radius:6px; transition:background 0.2s;" title="中文">🇨🇳</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <header>
-        <h1>让芬兰食客更容易找到您的餐厅</h1>
-        <p>不要只依赖 Wolt 和 Foodora。拥有一个属于自己的专业网站，提升谷歌排名，建立私域流量，让顾客直接找到您。</p>
+        <h1><span class="lang lang-zh">让芬兰食客更容易找到您的餐厅</span><span class="lang lang-en">Help Finnish Diners Find Your Restaurant</span><span class="lang lang-fi">Tee ravintolastasi helposti löydettävä Suomessa</span></h1>
+        <p>
+            <span class="lang lang-zh">不要只依赖 Wolt 和 Foodora。拥有一个属于自己的专业网站，提升谷歌排名，建立私域流量，让顾客直接找到您。</span>
+            <span class="lang lang-en">Don’t rely solely on platforms like Wolt and Foodora. A dedicated, professional website improves Google visibility, builds direct customer channels, and lets diners reach you directly.</span>
+            <span class="lang lang-fi">Älä luota pelkästään Woltiin tai Foodoraan. Ammattimainen kotisivu parantaa Google‑näkyvyyttä, rakentaa suoria asiakassuhteita ja auttaa asiakkaita löytämään sinut suoraan.</span>
+        </p>
         <br>
-        <a href="#contact" class="hero-btn">399€ 起，打造您的餐厅官网</a>
+        <a href="#contact" class="hero-btn"><span class="lang lang-zh">399€ 起，打造您的餐厅官网</span><span class="lang lang-en">From €399 — Launch Your Restaurant Website</span><span class="lang lang-fi">Alkaen 399 € — Rakenna ravintolasi kotisivu</span></a>
     </header>
 
     <section class="section bg-gray">
-        <h2 class="section-title">为什么您的餐厅需要独立网站？</h2>
+        <h2 class="section-title"><span class="lang lang-zh">为什么您的餐厅需要独立网站？</span><span class="lang lang-en">Why Your Restaurant Needs Its Own Website</span><span class="lang lang-fi">Miksi ravintolasi tarvitsee oman verkkosivun?</span></h2>
         <div class="comparison-grid">
             <div class="compare-card bad">
-                <h3>🚫 仅依赖外卖平台</h3>
+                <h3>🚫 <span class="lang lang-zh">仅依赖外卖平台</span><span class="lang lang-en">Relying Only on Delivery Platforms</span><span class="lang lang-fi">Pelkkään ruokatoimituspalveluun tukeutuminen</span></h3>
                 <ul class="check-list cross">
-                    <li>每单抽取 25%-30% 高额佣金</li>
-                    <li>无法获取顾客真实联系方式</li>
-                    <li>在谷歌地图 (Google Maps) 上搜索排名低</li>
-                    <li>受制于平台规则，随时被动</li>
+                    <li><span class="lang lang-zh">每单抽取 25%-30% 高额佣金</span><span class="lang lang-en">High commissions: platforms take 25–30% per order</span><span class="lang lang-fi">Korkeat provisiot: 25–30% per tilaus</span></li>
+                    <li><span class="lang lang-zh">无法获取顾客真实联系方式</span><span class="lang lang-en">No access to customers’ contact details</span><span class="lang lang-fi">Ei pääsyä asiakkaiden yhteystietoihin</span></li>
+                    <li><span class="lang lang-zh">在谷歌地图 (Google Maps) 上搜索排名低</span><span class="lang lang-en">Low visibility in Google Maps searches</span><span class="lang lang-fi">Heikko näkyvyys Google Maps -hauissa</span></li>
+                    <li><span class="lang lang-zh">受制于平台规则，随时被动</span><span class="lang lang-en">Subject to platform rules and policy changes</span><span class="lang lang-fi">Alistut alustojen sääntöihin ja muutoksiin</span></li>
                 </ul>
             </div>
             <div class="compare-card good">
-                <h3>✅ 拥有独立餐厅网站</h3>
+                <h3>✅ <span class="lang lang-zh">拥有独立餐厅网站</span><span class="lang lang-en">Own an Independent Restaurant Website</span><span class="lang lang-fi">Oma, itsenäinen ravintolasivu</span></h3>
                 <ul class="check-list">
-                    <li><strong>0 佣金</strong>：顾客看菜单，电话/微信直接下单</li>
-                    <li><strong>提升形象</strong>：展示高清菜品图，提升客单价</li>
-                    <li><strong>SEO 优化</strong>：顾客搜 "附近中餐" 优先展示您</li>
-                    <li><strong>完全掌控</strong>：随时更新菜单、假期通知</li>
+                    <li><strong><span class="lang lang-zh">0 佣金</span><span class="lang lang-en">Zero commissions</span><span class="lang lang-fi">0% provisiot</span></strong>：<span class="lang lang-zh">顾客看菜单，电话/微信直接下单</span><span class="lang lang-en">customers view the menu and order via phone/WeChat</span><span class="lang lang-fi">asiakkaat tilaavat suoraan puhelimella/WeChatilla</span></li>
+                    <li><strong><span class="lang lang-zh">提升形象</span><span class="lang lang-en">Enhance your image</span><span class="lang lang-fi">Paranna imagoa</span></strong>：<span class="lang lang-zh">展示高清菜品图，提升客单价</span><span class="lang lang-en">showcase high‑quality photos to increase average spend</span><span class="lang lang-fi">näytä laadukkaat ruoka‑kuvat ja nosta ostoksen arvoa</span></li>
+                    <li><strong><span class="lang lang-zh">SEO 优化</span><span class="lang lang-en">SEO optimization</span><span class="lang lang-fi">SEO‑optimointi</span></strong>：<span class="lang lang-zh">顾客搜 "附近中餐" 优先展示您</span><span class="lang lang-en">appear first when customers search "Chinese food near me"</span><span class="lang lang-fi">ilmesty hakutulosten kärkeen, kun asiakkaat etsivät lähellä olevaa kiinalaista</span></li>
+                    <li><strong><span class="lang lang-zh">完全掌控</span><span class="lang lang-en">Full control</span><span class="lang lang-fi">Täysi kontrolli</span></strong>：<span class="lang lang-zh">随时更新菜单、假期通知</span><span class="lang lang-en">update menus and notices anytime</span><span class="lang lang-fi">päivitä menu ja aukiolo helposti</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section class="section">
-        <h2 class="section-title">专为芬兰市场设计的网站风格</h2>
+        <h2 class="section-title"><span class="lang lang-zh">专为芬兰市场设计的网站风格</span><span class="lang lang-en">Website Design Tailored for the Finnish Market</span><span class="lang lang-fi">Suunniteltu Suomen markkinoille</span></h2>
         <div class="features-grid">
             <div class="feature-item">
-                <h3>📱 完美适配手机端</h3>
-                <p>90% 的芬兰人通过手机搜索餐厅。我们的网站在 iPhone 和 Android 上操作流畅。</p>
+                <h3>📱 <span class="lang lang-zh">完美适配手机端</span><span class="lang lang-en">Mobile‑First Design</span><span class="lang lang-fi">Mobiiliystävällinen suunnittelu</span></h3>
+                <p><span class="lang lang-zh">90% 的芬兰人通过手机搜索餐厅。我们的网站在 iPhone 和 Android 上操作流畅。</span><span class="lang lang-en">90% of Finns search for restaurants on mobile — our sites run smoothly on iPhone and Android.</span><span class="lang lang-fi">90 % suomalaisista etsii ravintoloita mobiililla — sivumme toimivat sujuvasti sekä iPhoneilla että Androidilla.</span></p>
             </div>
             <div class="feature-item">
-                <h3>🇫🇮 芬/英/中 三语切换</h3>
-                <p>本地化芬兰语菜单设计，消除语言障碍，让本地顾客点餐更自信。</p>
+                <h3>🇫🇮 <span class="lang lang-zh">芬/英/中 三语切换</span><span class="lang lang-en">FI / EN / ZH Trilingual</span><span class="lang lang-fi">Suomi / Englanti / 中文</span></h3>
+                <p><span class="lang lang-zh">本地化芬兰语菜单设计，消除语言障碍，让本地顾客点餐更自信。</span><span class="lang lang-en">Localized Finnish menus remove language barriers and help locals order with confidence.</span><span class="lang lang-fi">Paikallistetut suomenkieliset menut poistavat kielimuurin ja auttavat paikallisia tilaamaan luottavaisin mielin.</span></p>
             </div>
             <div class="feature-item">
-                <h3>📍 谷歌地图深度绑定</h3>
-                <p>我们将您的官网链接到 Google Maps 商家页面，直接增加曝光率。</p>
+                <h3>📍 <span class="lang lang-zh">谷歌地图深度绑定</span><span class="lang lang-en">Deep Google Maps Integration</span><span class="lang lang-fi">Tiivis Google Maps -integraatio</span></h3>
+                <p><span class="lang lang-zh">我们将您的官网链接到 Google Maps 商家页面，直接增加曝光率。</span><span class="lang lang-en">We link your website to your Google Maps business listing to increase exposure.</span><span class="lang lang-fi">Linkitämme kotisivusi Google Maps -yritysprofiiliin, mikä lisää näkyvyyttä.</span></p>
             </div>
         </div>
     </section>
     
     <section id="demos" class="section bg-gray">
         <div class="pricing-container">
-            <h2 class="section-title">选择适合您的风格</h2>
-            <p style="text-align:center; margin-bottom:20px;">点击下面的示例页面查看两种常用餐厅模板演示。</p>
+            <h2 class="section-title"><span class="lang lang-zh">选择适合您的风格</span><span class="lang lang-en">Choose The Style That Fits Your Restaurant</span><span class="lang lang-fi">Valitse tyyli, joka sopii ravintolallesi</span></h2>
+            <p style="text-align:center; margin-bottom:20px;"><span class="lang lang-zh">点击下面的示例页面查看两种常用餐厅模板演示。</span><span class="lang lang-en">Click the demos below to preview two popular restaurant templates.</span><span class="lang lang-fi">Katso alla olevista demoista kaksi suosittua ravintolapohjaa.</span></p>
             <div style="display:flex; gap:40px; flex-wrap:wrap; justify-content:center; margin-top:10px;">
                 <div style="background:white; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05); overflow:hidden; width:320px;">
                     <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" alt="Buffet demo" style="width:100%; height:180px; object-fit:cover; display:block;">
                     <div style="padding:18px; text-align:left;">
-                        <h3 style="margin:0 0 8px; font-size:1.2rem; color:var(--fin-blue);">自助餐风格 (Buffet)</h3>
-                        <p style="color:#666; margin-bottom:12px;">适合主打午餐 Buffet 的餐厅，展示价格看板、营业时间及菜品选择。</p>
-                        <a href="demo-buffet.html" class="nav-btn" style="background:transparent; border:2px solid var(--alert-red); color:var(--alert-red); padding:8px 12px; border-radius:6px; text-decoration:none; display:inline-block;">点击体验 Demo</a>
+                        <h3 style="margin:0 0 8px; font-size:1.2rem; color:var(--fin-blue);"><span class="lang lang-zh">自助餐风格 (Buffet)</span><span class="lang lang-en">Buffet Style</span><span class="lang lang-fi">Buffet‑tyyli</span></h3>
+                        <p style="color:#666; margin-bottom:12px;"><span class="lang lang-zh">适合主打午餐 Buffet 的餐厅，展示价格看板、营业时间及菜品选择。</span><span class="lang lang-en">Ideal for lunch buffets — showcases prices, opening hours and dish selection.</span><span class="lang lang-fi">Sopii lounasbuffeteille — näyttää hinnat, aukioloajat ja ruokalistan.</span></p>
+                        <a href="demo-buffet.html" class="nav-btn" style="background:transparent; border:2px solid var(--alert-red); color:var(--alert-red); padding:8px 12px; border-radius:6px; text-decoration:none; display:inline-block;"><span class="lang lang-zh">点击体验 Demo</span><span class="lang lang-en">View Demo</span><span class="lang lang-fi">Katso demo</span></a>
                     </div>
                 </div>
 
                 <div style="background:white; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05); overflow:hidden; width:320px;">
                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="A la carte demo" style="width:100%; height:180px; object-fit:cover; display:block;">
                     <div style="padding:18px; text-align:left;">
-                        <h3 style="margin:0 0 8px; font-size:1.2rem; color:var(--fin-blue);">点餐风格 (A la Carte)</h3>
-                        <p style="color:#666; margin-bottom:12px;">适合精品中餐、点餐制餐厅，侧重氛围与单点菜品展示。</p>
-                        <a href="demo-order.html" class="nav-btn" style="background:transparent; border:2px solid var(--alert-red); color:var(--alert-red); padding:8px 12px; border-radius:6px; text-decoration:none; display:inline-block;">点击体验 Demo</a>
+                        <h3 style="margin:0 0 8px; font-size:1.2rem; color:var(--fin-blue);"><span class="lang lang-zh">点餐风格 (A la Carte)</span><span class="lang lang-en">A la Carte Style</span><span class="lang lang-fi">À la carte -tyyli</span></h3>
+                        <p style="color:#666; margin-bottom:12px;"><span class="lang lang-zh">适合精品中餐、点餐制餐厅，侧重氛围与单点菜品展示。</span><span class="lang lang-en">Perfect for boutique Chinese restaurants — emphasizes atmosphere and single‑item dishes.</span><span class="lang lang-fi">Sopii laadukkaille ravintoloille — korostaa tunnelmaa ja annosvalikoimaa.</span></p>
+                        <a href="demo-order.html" class="nav-btn" style="background:transparent; border:2px solid var(--alert-red); color:var(--alert-red); padding:8px 12px; border-radius:6px; text-decoration:none; display:inline-block;"><span class="lang lang-zh">点击体验 Demo</span><span class="lang lang-en">View Demo</span><span class="lang lang-fi">Katso demo</span></a>
                     </div>
                 </div>
             </div>
@@ -192,33 +213,33 @@
 
     <section class="section bg-gray">
         <div class="pricing-container">
-            <h2 class="section-title">简单透明的收费标准</h2>
-            <p>无隐形费用。一次付费，长期无忧。</p>
+            <h2 class="section-title"><span class="lang lang-zh">简单透明的收费标准</span><span class="lang lang-en">Simple, Transparent Pricing</span><span class="lang lang-fi">Yksinkertainen ja läpinäkyvä hinnoittelu</span></h2>
+            <p><span class="lang lang-zh">无隐形费用。一次付费，长期无忧。</span><span class="lang lang-en">No hidden fees — one clear upfront payment for long‑term peace of mind.</span><span class="lang lang-fi">Ei piilokuluja — selkeä kertamaksu ja mielenrauhaa pitkäksi aikaa.</span></p>
             <br>
             <div class="price-card">
-                <h3>全包建站套餐 (Startup Package)</h3>
-                <div class="price">399€ <span style="font-size: 1rem; color: #666; font-weight: normal;">(一次性设计费)</span></div>
-                <p class="sub-price">+ 20€ / 月 (包含服务器、域名 .fi 或 .com、技术维护)</p>
+                <h3><span class="lang lang-zh">全包建站套餐</span><span class="lang lang-en">All‑in Website Package</span><span class="lang lang-fi">Täysi verkkosivupaketti</span> <span style="font-size:0.95rem; color:#666; font-weight:600;">(Startup Package)</span></h3>
+                <div class="price">399€ <span style="font-size: 1rem; color: #666; font-weight: normal;"><span class="lang lang-zh">(一次性设计费)</span><span class="lang lang-en">(one‑time design fee)</span><span class="lang lang-fi">(kertasuunnittelupalkkio)</span></span></div>
+                <p class="sub-price"><span class="lang lang-zh">+ 20€ / 月 (包含服务器、域名 .fi 或 .com、技术维护)</span><span class="lang lang-en">+ €20 / month (hosting, .fi/.com domain & maintenance)</span><span class="lang lang-fi">+ 20 €/kk (sis. hostingin, .fi/.com‑verkkotunnuksen ja ylläpidon)</span></p>
                 <br>
                 <div style="text-align: left; display: inline-block;">
                     <ul class="check-list">
-                        <li>赠送 .fi 或 .com 域名一年</li>
-                        <li><strong>免费</strong> 菜单上传与修改 (每月一次)</li>
-                        <li><strong>赠送</strong> 其他平台订桌功能集成</li>
-                        <li><strong>赠送</strong> 餐厅二维码桌贴设计 (QR Code)</li>
-                        <li><strong>增值服务（价格待议）</strong> 餐厅推广服务 (搜索优化、社交媒体推广)</li>
+                        <li><span class="lang lang-zh">赠送 .fi 或 .com 域名一年</span><span class="lang lang-en">Includes one year .fi or .com domain</span><span class="lang lang-fi">Sisältää 1 vuoden .fi- tai .com‑verkkotunnuksen</span></li>
+                        <li><strong><span class="lang lang-zh">免费</span><span class="lang lang-en">Free</span><span class="lang lang-fi">Ilmainen</span></strong> <span class="lang lang-zh">菜单上传与修改 (每月一次)</span><span class="lang lang-en">menu upload & updates (one per month)</span><span class="lang lang-fi">ruokalistan päivitys (1/kk)</span></li>
+                        <li><span class="lang lang-zh"><strong>赠送</strong> 其他平台订桌功能集成</span><span class="lang lang-en">Includes integrations with booking systems on other platforms</span><span class="lang lang-fi">Sisältää varausjärjestelmäintegraatiot</span></li>
+                        <li><span class="lang lang-zh"><strong>赠送</strong> 餐厅二维码桌贴设计 (QR Code)</span><span class="lang lang-en">Complimentary QR‑code table sticker design</span><span class="lang lang-fi">Ilmainen QR‑koodi pöytä‑tarrasuunnittelu</span></li>
+                        <li><span class="lang lang-zh"><strong>增值服务（价格待议）</strong> 餐厅推广服务 (搜索优化、社交媒体推广)</span><span class="lang lang-en">Optional marketing services (price on request): SEO & social media</span><span class="lang lang-fi">Lisäpalvelut (hinta sovittavissa): hakukoneoptimointi ja some‑markkinointi</span></li>
                     </ul>
                 </div>
                 <br><br>
-                <a href="#contact" class="hero-btn">预约建站</a>
+                <a href="#contact" class="hero-btn"><span class="lang lang-zh">预约建站</span><span class="lang lang-en">Book Your Website</span><span class="lang lang-fi">Varaa sivustosi</span></a>
             </div>
         </div>
     </section>
 
     <section id="contact" class="section">
         <div class="pricing-container">
-            <h2 class="section-title">联系我们，1周内上线</h2>
-            <p>我们讲中文！请直接添加微信咨询，或发送邮件。</p>
+            <h2 class="section-title"><span class="lang lang-zh">联系我们，1周内上线</span><span class="lang lang-en">Contact Us — Live Within One Week</span><span class="lang lang-fi">Ota yhteyttä — valmiina viikossa</span></h2>
+            <p><span class="lang lang-zh">我们讲中文！请直接添加微信咨询，或发送邮件。</span><span class="lang lang-en">We speak Chinese — add us on WeChat or send an email to get started.</span><span class="lang lang-fi">Puhumme kiinaa — lisää meidät WeChatissa tai lähetä sähköpostia aloittaaksesi.</span></p>
             
             <div class="wechat-box">
                 <h3 style="color: green;">WeChat / 微信</h3>
@@ -234,8 +255,42 @@
     </section>
     
     <footer>
-        <p>&copy; 2024 Makuelämys (舌尖盛宴 芬兰精选). 专注芬兰餐饮数字化.</p>
+        <p>&copy; 2024 Makuelämys <span class="lang lang-zh">(舌尖盛宴 芬兰精选). 专注芬兰餐饮数字化.</span><span class="lang lang-en">— Focused on digital solutions for Finnish restaurants.</span><span class="lang lang-fi">— Keskittynyt suomalaisen ravintola‑alan digitalisointiin.</span></p>
     </footer>
+
+    <script>
+        (function(){
+            var langBtn = document.getElementById('langBtn');
+            var langDropdown = document.getElementById('langDropdown');
+            var saved = localStorage.getItem('siteLang') || 'fi';
+            var flags = { 'fi': '🇫🇮', 'en': '🇬🇧', 'zh': '🇨🇳' };
+            
+            function apply(lang){
+                document.documentElement.classList.remove('lang-fi','lang-en','lang-zh');
+                document.documentElement.classList.add('lang-' + lang);
+                langBtn.textContent = flags[lang] || '🇫🇮';
+                localStorage.setItem('siteLang', lang);
+                document.documentElement.lang = (lang === 'zh' ? 'zh-CN' : (lang === 'fi' ? 'fi' : 'en'));
+                langDropdown.style.display = 'none';
+            }
+            
+            // Toggle dropdown on button click
+            langBtn.addEventListener('click', function(e){
+                e.stopPropagation();
+                langDropdown.style.display = langDropdown.style.display === 'none' ? 'block' : 'none';
+            });
+            
+            // Language selection
+            document.getElementById('lang-fi').addEventListener('click', function(e){ e.preventDefault(); apply('fi'); });
+            document.getElementById('lang-en').addEventListener('click', function(e){ e.preventDefault(); apply('en'); });
+            document.getElementById('lang-zh').addEventListener('click', function(e){ e.preventDefault(); apply('zh'); });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(){ langDropdown.style.display = 'none'; });
+            
+            apply(saved);
+        })();
+    </script>
 
 </body>
 </html>

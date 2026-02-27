@@ -7,6 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* Language visibility */
+        .lang { display: none; }
+        html.lang-fi .lang-fi { display: inline; }
+        html.lang-en .lang-en { display: inline; }
+        html.lang-zh .lang-zh { display: inline; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
         body { font-family: 'Montserrat', sans-serif; background-color: #fcfbf7; color: #2d2a26; }
         .dish-card { background: white; transition: all 0.4s ease; border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; }
@@ -18,7 +23,7 @@
     <div class="fixed bottom-8 right-8 z-[100] group">
         <a href="index.html#contact" class="bg-stone-900 text-stone-200 px-6 py-4 rounded-xl shadow-2xl flex flex-col items-end border border-stone-700 hover:bg-stone-800 transition">
             <span class="text-[10px] uppercase tracking-widest opacity-60">Professional Web Design</span>
-            <span class="font-bold text-amber-500 font-sans">联系我们咨询详情</span>
+            <span class="font-bold text-amber-500 font-sans"><span class="lang lang-zh">联系我们咨询详情</span><span class="lang lang-en">Contact us for details</span><span class="lang lang-fi">Ota yhteyttä saadaksesi lisätietoja</span></span>
         </a>
     </div>
 
@@ -26,8 +31,8 @@
     <header class="py-16 text-center">
         <div class="text-[10px] tracking-[0.4em] uppercase text-stone-400 mb-4">Tampere • Keskustori</div>
         <h1 class="text-6xl italic text-stone-800 leading-tight">
-            <span class="block md:inline whitespace-nowrap">舌尖盛宴</span>
-            <span class="block md:inline whitespace-nowrap md:ml-4">芬兰精选</span>
+            <span class="block md:inline whitespace-nowrap"><span class="lang lang-zh">舌尖盛宴</span><span class="lang lang-en">Makuelämys</span><span class="lang lang-fi">Makuelämys</span></span>
+            <span class="block md:inline whitespace-nowrap md:ml-4"><span class="lang lang-zh">芬兰精选</span><span class="lang lang-en">— Flavours of Finland</span><span class="lang lang-fi">— Suomalaiset makuelämykset</span></span>
         </h1>
         <div class="w-12 h-px bg-amber-600 mx-auto mt-6"></div>
     </header>
@@ -214,5 +219,20 @@
             </div>
         </div>
     </footer>
+
+
+
+    <script>
+        (function(){
+            var saved = localStorage.getItem('siteLang') || 'fi';
+            function apply(lang){
+                document.documentElement.classList.remove('lang-fi','lang-en','lang-zh');
+                document.documentElement.classList.add('lang-' + lang);
+                localStorage.setItem('siteLang', lang);
+                document.documentElement.lang = (lang === 'zh' ? 'zh-CN' : (lang === 'fi' ? 'fi' : 'en'));
+            }
+            apply(saved);
+        })();
+    </script>
 </body>
 </html>

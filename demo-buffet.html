@@ -6,19 +6,26 @@
     <title>舌尖盛宴 芬兰精选</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Language visibility */
+        .lang { display: none; }
+        html.lang-fi .lang-fi { display: inline; }
+        html.lang-en .lang-en { display: inline; }
+        html.lang-zh .lang-zh { display: inline; }
         .dish-card:hover img { transform: scale(1.1); transition: 0.5s; }
         /* 确保图片加载失败时也有底色 */
         img { background-color: #f3f4f6; }
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
-    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] bg-black/90 text-white px-6 py-3 rounded-full flex items-center shadow-2xl border border-white/20 whitespace-nowrap">
-        <span class="mr-4 text-sm font-light">这是网站预览效果</span>
-        <a href="index.html#contact" class="bg-red-600 px-4 py-1 rounded-full text-sm font-bold hover:bg-red-500 transition">联系制作同款</a>
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] bg-black/90 text-white px-6 py-3 rounded-full flex items-center flex-nowrap shadow-2xl border border-white/20 gap-3">
+        <span class="mr-4 text-sm font-light whitespace-nowrap" style="display:inline; flex-shrink:1; min-width:0;"><span class="lang lang-zh">样品</span><span class="lang lang-en">demo page</span><span class="lang lang-fi">sivuston esikatselu</span></span>
+        <a href="index.html#contact" class="bg-red-600 px-4 py-1 rounded-full text-sm font-bold hover:bg-red-500 transition flex-shrink-0"><span class="lang lang-zh">制作同款</span><span class="lang lang-en">Contact</span><span class="lang lang-fi">Ota yhteyttä</span></a>
     </div>
 
     <nav class="bg-white shadow-sm sticky top-0 z-50 py-4 px-6 flex justify-between items-center">
-        <div class="font-black text-2xl tracking-tighter text-red-700 uppercase leading-none">舌尖盛宴 芬兰精选</div>
+        <div style="display:flex; align-items:center; gap:12px;">
+            <div class="font-black text-2xl tracking-tighter text-red-700 uppercase leading-none"><span class="lang lang-zh">舌尖盛宴 芬兰精选</span><span class="lang lang-en">Makuelämys — Flavours of Finland</span><span class="lang lang-fi">Makuelämys — Suomalaiset makuelämykset</span></div>
+        </div>
         <div class="flex space-x-4 text-xs font-bold uppercase tracking-widest text-gray-400 leading-none">
             <span class="text-red-600 border-b-2 border-red-600 leading-none">FI</span>
             <span class="leading-none">EN</span>
@@ -173,5 +180,18 @@
     <footer class="py-10 text-center text-gray-400 text-xs font-light uppercase tracking-widest">
         © Golden Dragon Tampere • All Rights Reserved
     </footer>
+
+    <script>
+        (function(){
+            var saved = localStorage.getItem('siteLang') || 'fi';
+            function apply(lang){
+                document.documentElement.classList.remove('lang-fi','lang-en','lang-zh');
+                document.documentElement.classList.add('lang-' + lang);
+                localStorage.setItem('siteLang', lang);
+                document.documentElement.lang = (lang === 'zh' ? 'zh-CN' : (lang === 'fi' ? 'fi' : 'en'));
+            }
+            apply(saved);
+        })();
+    </script>
 </body>
 </html>
