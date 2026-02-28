@@ -2,7 +2,7 @@
 <html lang="fi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>舌尖盛宴 芬兰精选</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -14,6 +14,7 @@
         html.lang-zh .lang-zh { display: inline; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
         body { font-family: 'Montserrat', sans-serif; background-color: #fcfbf7; color: #2d2a26; }
+        body { padding-bottom: env(safe-area-inset-bottom); padding-top: env(safe-area-inset-top); overflow-x: hidden; }
         .dish-card { background: white; transition: all 0.4s ease; border: 1px solid #eee; height: 100%; display: flex; flex-direction: column; }
         .dish-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1); }
         .allergy-tag { font-size: 10px; font-weight: bold; color: #92400e; background: #fef3c7; padding: 2px 6px; rounded: 4px; }
@@ -32,8 +33,7 @@
         <div class="text-[10px] tracking-[0.4em] uppercase text-stone-400 mb-4">Tampere • Keskustori</div>
         <h1 class="text-6xl italic text-stone-800 leading-tight">
             <span class="block md:inline whitespace-nowrap"><span class="lang lang-zh">舌尖盛宴</span><span class="lang lang-en">Makuelämys</span><span class="lang lang-fi">Makuelämys</span></span>
-            <span class="block md:inline whitespace-nowrap md:ml-4"><span class="lang lang-zh">芬兰精选</span><span class="lang lang-en">— Flavours of Finland</span><span class="lang lang-fi">— Suomalaiset makuelämykset</span></span>
-        </h1>
+            </h1>
         <div class="w-12 h-px bg-amber-600 mx-auto mt-6"></div>
     </header>
 
